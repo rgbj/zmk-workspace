@@ -28,6 +28,8 @@ manifest:
       url-base: https://github.com/urob
     - name: rgbj
       url-base: https://github.com/rgbj
+    - name: boardsource
+      url-base: https://github.com/boardsource
 
   projects:
     # - name: zmk-helpers
@@ -43,6 +45,10 @@ manifest:
       revision: main
       path: modules/rollow
       remote: rgbj
+    - name: Rechtek-zmk-config
+      revision: main
+      path: modules/rechteck
+      remote: boardsource
 
     # ZMK with Zephyr namespaced under /zmk. This requires that ZMK imports
     # Zephyr with a path other than `zephyr` (as in `going-modular`).

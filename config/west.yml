@@ -34,10 +34,10 @@ manifest:
     #   revision: main
     #   path: modules/helpers
     #   remote: urob
-    # - name: zmk-auto-layer
-    #   revision: main
-    #   path: modules/auto-layer
-    #   remote: urob
+    - name: zmk-auto-layer
+      revision: main
+      path: modules/auto-layer
+      remote: urob
     - name: zmk-tri-state
       revision: main
       path: modules/tri-state

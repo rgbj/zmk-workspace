@@ -19,34 +19,29 @@
 ---
 manifest:
   defaults:
-    remote: rgbj
+    remote: urob
 
   remotes:
     # - name: upstream
     #   url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
-    - name: rgbj
-      url-base: https://github.com/rgbj
 
   projects:
     # - name: zmk-helpers
     #   revision: main
     #   path: modules/helpers
-    #   remote: urob
     - name: zmk-auto-layer
       revision: main
       path: modules/auto-layer
-      remote: urob
     - name: zmk-tri-state
       revision: main
       path: modules/tri-state
-      remote: urob
 
     # ZMK with Zephyr namespaced under /zmk. This requires that ZMK imports
     # Zephyr with a path other than `zephyr` (as in `going-modular`).
     - name: zmk
-      revision: urob_going-modular
+      revision: going-modular
       path: .
       import:
         file: app/west.yml

@@ -1,0 +1,497 @@
+layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
+layers:
+  qwerty:
+  - Esc
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: adj, h: ' '}
+  - ⇥
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ''''
+  - {t: fun, h: ' '}
+  - '`'
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
+  - /
+  - 🐯
+  - {t: RSHFT, h: ' ', s: cw}
+  - sym
+  - ␣
+  - '&tdnav'
+  - {t: '&num_word 1', h: num}
+  - cw
+  num:
+  - {t: ▽, type: trans}
+  - _
+  - '7'
+  - '8'
+  - '9'
+  - {t: '=', s: '&col_eq'}
+  - ⌥⌫
+  - ''
+  - '|'
+  - \
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '-'
+  - '4'
+  - '5'
+  - '6'
+  - +
+  - ⌫
+  - {t: ⌘, h: ' '}
+  - {t: ⌥, h: ' '}
+  - {t: ⌃, h: ' '}
+  - {t: ⇧, h: ' '}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - '0'
+  - ⌦
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: num, h: toggle, type: held}
+  - {t: ▽, type: trans}
+  sym:
+  - {t: ▽, type: trans}
+  - ⇧⌘`
+  - ⌘⇥
+  - ⌃⇧⇥
+  - ⌃⇥
+  - ⌘`
+  - ⌥⌫
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '&wptt'
+  - {t: ▽, type: trans}
+  - {t: ⇧, h: ' '}
+  - {t: ⌃, h: ' '}
+  - {t: ⌥, h: ' '}
+  - {t: ⌘, h: ' '}
+  - ''
+  - ⌫
+  - '-'
+  - _
+  - '%'
+  - ^
+  - '&wtt'
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ⌦
+  - '&'
+  - '*'
+  - <[{(
+  - )}]>
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - ⏎
+  - {t: ▽, type: trans}
+  - {t: nav, h: nav}
+  nav:
+  - {t: ▽, type: trans}
+  - ''
+  - ⤒
+  - ↑
+  - ⤓
+  - ⇞
+  - ⌃⌥↑
+  - ⌃⌥⌘←
+  - ⌃⌥⌘→
+  - ⌥W
+  - Esc+D
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ←
+  - ↓
+  - →
+  - ⇟
+  - ⌃⌥←
+  - ⌃⌥→
+  - ⌃⌥⏎
+  - ⌃R
+  - ⌃Q
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ⌃QP
+  - ⌃QN
+  - ⌥B
+  - ⌥F
+  - ''
+  - ⌃⌥↓
+  - {t: ⌘, h: ' '}
+  - {t: ⌥, h: ' '}
+  - {t: ⌃, h: ' '}
+  - {t: ⇧, h: ' '}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: RSHFT, h: ' ', s: cw}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: nav, h: toggle, type: held}
+  mouse:
+  - {t: ▽, type: trans}
+  - ''
+  - '&msc SCRL_LEFT'
+  - '&mmv MOVE_UP'
+  - '&msc SCRL_RIGHT'
+  - '&msc SCRL_UP'
+  - ⌃⌥↑
+  - ⌃⌥⌘←
+  - ⌃⌥⌘→
+  - ⌥W
+  - Esc+D
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_RIGHT'
+  - '&msc SCRL_DOWN'
+  - ⌃⌥←
+  - ⌃⌥→
+  - ⌃⌥⏎
+  - ⌃R
+  - ⌃Q
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp MB4'
+  - '&mkp LCLK'
+  - '&mkp MCLK'
+  - '&mkp RCLK'
+  - '&mkp MB5'
+  - ⌃⌥↓
+  - {t: ⌘, h: ' '}
+  - {t: ⌥, h: ' '}
+  - {t: ⌃, h: ' '}
+  - {t: ⇧, h: ' '}
+  - {t: ▽, type: trans}
+  - '&mkp LCLK'
+  - '&mkp MCLK'
+  - '&mkp RCLK'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: nav, h: toggle}
+  adj:
+  - ''
+  - ''
+  - Out USB
+  - Out TOG
+  - Out BLE
+  - ''
+  - ''
+  - Out BLE
+  - Out TOG
+  - Out USB
+  - ''
+  - {type: held}
+  - ''
+  - '&bts0'
+  - '&bts1'
+  - '&bts2'
+  - '&bts3'
+  - '&bts4'
+  - '&bts4'
+  - '&bts3'
+  - '&bts2'
+  - '&bts1'
+  - '&btx0'
+  - ''
+  - ''
+  - Boot
+  - Reset
+  - EP ON
+  - EP TOG
+  - EP OFF
+  - EP OFF
+  - EP TOG
+  - EP ON
+  - Reset
+  - Boot
+  - {t: media, h: toggle}
+  - ''
+  - {t: adjd, h: ' '}
+  - {t: adjx, h: ' '}
+  - {t: adjx, h: ' '}
+  - {t: adjd, h: ' '}
+  - ''
+  adjx:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - '&btx0'
+  - '&btx1'
+  - '&btx2'
+  - '&btx3'
+  - '&btx4'
+  - '&btx4'
+  - '&btx3'
+  - '&btx2'
+  - '&btx1'
+  - '&btx0'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  adjd:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - '&btd0'
+  - '&btd1'
+  - '&btd2'
+  - '&btd3'
+  - '&btd4'
+  - '&btd0'
+  - '&btd1'
+  - '&btd2'
+  - '&btd3'
+  - '&btd4'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  fun:
+  - ''
+  - F9
+  - F10
+  - F11
+  - F12
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F5
+  - F6
+  - F7
+  - F8
+  - ''
+  - ''
+  - {t: ⌘, h: ' '}
+  - {t: ⌥, h: ' '}
+  - {t: ⌃, h: ' '}
+  - {t: ⇧, h: ' '}
+  - {type: held}
+  - ''
+  - F1
+  - F2
+  - F3
+  - F4
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  acc:
+  - ''
+  - Alt+ Q
+  - ''
+  - Sft+Alt+ 2
+  - ''
+  - ''
+  - ''
+  - Alt+ U
+  - Alt+ I
+  - ''
+  - ''
+  - ''
+  - ''
+  - Alt+ '
+  - ''
+  - {type: held}
+  - {type: held}
+  - ''
+  - ''
+  - Alt+ E
+  - Alt+ `
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Alt+ C
+  - ''
+  - ''
+  - Alt+ N
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  media:
+  - I
+  - O
+  - Gui+ W
+  - ''
+  - ↑
+  - VOL UP
+  - VOL UP
+  - ↑
+  - ''
+  - Gui+ W
+  - I
+  - O
+  - J
+  - K
+  - ''
+  - ''
+  - ↓
+  - VOL DN
+  - VOL DN
+  - ↓
+  - ''
+  - ''
+  - J
+  - K
+  - ←
+  - →
+  - ''
+  - ''
+  - {t: media, h: toggle}
+  - MUTE
+  - MUTE
+  - {t: media, h: toggle}
+  - ''
+  - ''
+  - ←
+  - →
+  - Esc
+  - ⏎
+  - ␣
+  - ␣
+  - ⏎
+  - Esc
+combos:
+- p: [15, 16]
+  k: {t: acc, h: ' '}
+  l: [qwerty]
+- p: [0, 5]
+  k: {t: adj, h: ' '}
+  l: [sym]
+- p: [1, 5]
+  k: BT CLR
+  l: [adj]
+- p: [14, 15]
+  k: ⌫
+  l: [media]
+- p: [20, 21]
+  k: ⌫
+  l: [media]
+- p: [26, 27]
+  k: Gui+ ⌫
+  l: [media]
+- p: [32, 33]
+  k: Gui+ ⌫
+  l: [media]

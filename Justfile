@@ -84,8 +84,10 @@ clean-nix:
 draw:
     #!/usr/bin/env bash
     set -euo pipefail
-    keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/base.keymap" >"{{ draw }}/base.yaml"
-    keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/base.yaml" -k "ferris/sweep" >"{{ draw }}/base.svg"
+    keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/rollow.keymap" -o "{{ draw }}/ciz-rollow.yaml"
+    keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/ciz-rollow.yaml" -o "{{ draw }}/ciz-rollow.svg"
+    keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/bs_lp_60.keymap" -o "{{ draw }}/rechteck.yaml"
+    keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/rechteck.yaml" --qmk-keyboard gh60/satan --qmk-layout LAYOUT_60_ansi -o "{{ draw }}/rechteck.svg"
 
 # initialize west
 init:

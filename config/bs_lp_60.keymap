@@ -12,11 +12,32 @@
 
 #define ___ &none
 
+#define MACRO(NAME, ...) NAME: NAME { bindings = __VA_ARGS__; #binding-cells = <0>; compatible = "zmk,behavior-macro"; };
+
 &caps_word {
     continue-list = <BACKSPACE DELETE UNDERSCORE MINUS>;
 };
 
 / {
+    macros {
+        MACRO(bts0, <&bt BT_SEL 0>)
+        MACRO(bts1, <&bt BT_SEL 1>)
+        MACRO(bts2, <&bt BT_SEL 2>)
+        MACRO(bts3, <&bt BT_SEL 3>)
+        MACRO(bts4, <&bt BT_SEL 4>)
+
+        MACRO(btd0, <&bt BT_DISC 0>)
+        MACRO(btd1, <&bt BT_DISC 1>)
+        MACRO(btd2, <&bt BT_DISC 2>)
+        MACRO(btd3, <&bt BT_DISC 3>)
+        MACRO(btd4, <&bt BT_DISC 4>)
+
+        MACRO(btx0, <&bts0>, <&macro_wait_time 500>, <&btd1>, <&btd2>, <&btd3>, <&btd4>)
+        MACRO(btx1, <&bts1>, <&macro_wait_time 500>, <&btd0>, <&btd2>, <&btd3>, <&btd4>)
+        MACRO(btx2, <&bts2>, <&macro_wait_time 500>, <&btd0>, <&btd1>, <&btd3>, <&btd4>)
+        MACRO(btx3, <&bts3>, <&macro_wait_time 500>, <&btd0>, <&btd1>, <&btd2>, <&btd4>)
+        MACRO(btx4, <&bts4>, <&macro_wait_time 500>, <&btd0>, <&btd1>, <&btd2>, <&btd3>)
+    };
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -42,11 +63,11 @@ ___         ___     &kp HOME  &kp UP    &kp END    &kp PG_UP  ___     ___     __
 
 		adj {
 			bindings = <
-&bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  ___ ___ ___ ___ ___ ___ ___     ___
-___            ___           ___           ___           ___           ___           ___ ___ ___ ___ ___ ___ ___    ___
-___             ___           ___           ___           ___           ___           ___ ___ ___ ___ ___ ___       &out OUT_USB
-___              ___           ___           ___           ___           ___           ___ ___ ___ ___ ___          &out OUT_BLE
-___            ___             ___                                       ___                    ___    ___   ___    &bootloader
+___    &btx0  &btx1  &btx2  &btx3  &btx4  ___ ___ ___ ___ ___ ___ ___     &bt BT_CLR
+___     &btd0  &btd1  &btd2  &btd3  &btd4  ___ ___ ___ ___ ___ ___ ___    &sys_reset
+___      &bts0  &bts1  &bts2  &bts3  &bts4  ___ ___ ___ ___ ___ ___       &out OUT_USB
+___       ___    ___    ___    ___    ___    ___ ___ ___ ___ ___          &out OUT_BLE
+___     ___      ___                  ___             ___    ___   ___    &bootloader
 			>;
 		};
 	};

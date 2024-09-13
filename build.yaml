@@ -14,14 +14,20 @@
 ---
 include:
   # ciz
+  # - board: corneish_zen_v2_left
+  #   shield: settings_reset
+  # - board: corneish_zen_v2_right
+  #   shield: settings_reset
   - board: corneish_zen_v2_left
   - board: corneish_zen_v2_right
   # rollow
-  - board: nice_nano_v2
-    shield: settings_reset
+  # - board: nice_nano_v2
+  #   shield: settings_reset
   - board: nice_nano_v2
     shield: rollow_left
   - board: nice_nano_v2
     shield: rollow_right
   # rechteck
+  # - board: bs_lp_60
+  #   shield: settings_reset
   - board: bs_lp_60

@@ -53,11 +53,11 @@
 
 		nav {
 			bindings = <
-___        &kp F1  &kp F2    &kp F3    &kp F4     &kp F5     &kp F6  &kp F7  &kp F8  &kp F9    &kp F10   &kp F11  &kp F12    &kp DEL
-___         ___     &kp HOME  &kp UP    &kp END    &kp PG_UP  ___     ___     ___     &kp HOME  &kp UP    &kp END  ___       ___
-&caps_word   ___     &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  ___     ___     ___     &kp LEFT  &kp DOWN  &kp RIGHT         ___
-&trans        ___     ___       ___       ___        ___        ___     ___     ___     ___       ___                        &trans
-&trans      &trans    &trans                         ___                         ___              ___              ___       &sl ADJ
+___        &kp F1  &kp F2    &kp F3    &kp F4     &kp F5     &kp F6  &kp F7    &kp F8    &kp F9     &kp F10    &kp F11  &kp F12    &kp DEL
+___         ___     &kp HOME  &kp UP    &kp END    &kp PG_UP  ___     &kp HOME  &kp UP    &kp END    &kp PG_UP  ___     ___        ___
+&caps_word   ___     &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  ___     &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  ___               ___
+&trans        ___     ___       ___       ___        ___        ___     ___       ___       ___        ___                         ___
+&trans      &trans    &trans                         ___                           ___                 ___              ___        &sl ADJ
 			>;
 		};
 

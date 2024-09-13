@@ -64,11 +64,11 @@ ___         ___     &kp HOME  &kp UP    &kp END    &kp PG_UP  ___     &kp HOME  
 
 		rnav {
 			bindings = <
-___    ___  ___  ___  ___  ___  ___  ___       ___       ___        ___          ___  ___          ___
-___     ___  ___  ___  ___  ___  ___  &kp HOME  &kp UP    &kp END    &kp PG_UP    ___  ___         ___
-___      ___  ___  ___  ___  ___  ___  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    ___             ___
-___       ___  ___  ___  ___  ___  ___  ___       ___       ___        ___                         &kp UP
-___     ___    ___            ___                  ___                 &kp LEFT        &kp DOWN    &kp RIGHT
+___    ___  ___  ___  ___  ___  ___  ___       ___       ___        &kp C_MUTE  &kp C_VOL_UP  &kp C_VOL_DN    ___
+___     ___  ___  ___  ___  ___  ___  &kp HOME  &kp UP    &kp END    &kp PG_UP   ___           ___            ___
+___      ___  ___  ___  ___  ___  ___  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN   ___                         ___
+___       ___  ___  ___  ___  ___  ___  ___       ___       ___        ___                                    &kp UP
+___     ___    ___            ___                  ___                 &kp LEFT                &kp DOWN       &kp RIGHT
 			>;
 		};
 

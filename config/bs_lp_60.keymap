@@ -8,7 +8,8 @@
 
 #define QWE 0
 #define NAV 1
-#define ADJ 2
+#define RNAV 2
+#define ADJ 3
 
 #define ___ &none
 
@@ -43,11 +44,11 @@
 
         qwerty {
 			bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS  &kp EQUAL    &kp BSPC
-&kp TAB     &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I      &kp O    &kp P     &kp LBKT   &kp RBKT    &kp BSLH
-&kp ESC      &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT               &kp RET
-&kp LSHFT     &kp Z   &kp X   &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH                       &kp UP
-&kp LCTRL   &kp LALT  &kp LGUI                &kp SPACE                &mo NAV            &kp LEFT           &kp DOWN    &kp RIGHT
+&kp GRAVE     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8     &kp N9   &kp N0    &kp MINUS  &kp EQUAL    &kp BSPC
+&kp TAB        &kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I      &kp O    &kp P     &kp LBKT   &kp RBKT    &kp BSLH
+&lt RNAV ESC    &kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp SQT               &kp RET
+&kp LSHFT        &kp Z   &kp X   &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH                       &kp RSHIFT
+&kp LCTRL      &kp LALT  &kp LGUI                &kp SPACE                &mo NAV            &kp RGUI           &kp RALT    &kp RCTRL
 			>;
 		};
 
@@ -58,6 +59,16 @@ ___         ___     &kp HOME  &kp UP    &kp END    &kp PG_UP  ___     &kp HOME  
 &caps_word   ___     &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  ___     &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN  ___               ___
 &trans        ___     ___       ___       ___        ___        ___     ___       ___       ___        ___                         ___
 &trans      &trans    &trans                         ___                           ___                 ___              ___        &sl ADJ
+			>;
+		};
+
+		rnav {
+			bindings = <
+___    ___  ___  ___  ___  ___  ___  ___       ___       ___        ___          ___  ___          ___
+___     ___  ___  ___  ___  ___  ___  &kp HOME  &kp UP    &kp END    &kp PG_UP    ___  ___         ___
+___      ___  ___  ___  ___  ___  ___  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN    ___             ___
+___       ___  ___  ___  ___  ___  ___  ___       ___       ___        ___                         &kp UP
+___     ___    ___            ___                  ___                 &kp LEFT        &kp DOWN    &kp RIGHT
 			>;
 		};
 

@@ -1,6 +1,6 @@
 layers:
-  default:
-  - {t: Esc, s: '`'}
+  qwerty:
+  - '`'
   - '1'
   - '2'
   - '3'
@@ -28,7 +28,7 @@ layers:
   - '['
   - ']'
   - \
-  - CLCK
+  - {t: Esc, h: rnav}
   - A
   - S
   - D
@@ -52,17 +52,17 @@ layers:
   - ','
   - .
   - /
-  - RSHFT
+  - RSHIFT
   - ⌃
-  - ⌘
   - ⌥
+  - ⌘
   - ␣
-  - RALT
+  - nav
   - RGUI
-  - ble
+  - RALT
   - RCTRL
-  ble:
-  - BT CLR
+  nav:
+  - ''
   - F1
   - F2
   - F3
@@ -75,51 +75,175 @@ layers:
   - F10
   - F11
   - F12
-  - {t: ▽, type: trans}
-  - BT 1
-  - {t: ▽, type: trans}
+  - ⌦
+  - ''
+  - ''
+  - ⤒
   - ↑
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - BT 2
+  - ⤓
+  - ⇞
+  - ''
+  - ⤒
+  - ↑
+  - ⤓
+  - ⇞
+  - ''
+  - ''
+  - ''
+  - cw
+  - ''
   - ←
   - ↓
   - →
+  - ⇟
+  - ''
+  - ←
+  - ↓
+  - →
+  - ⇟
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - BT 3
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - BT 4
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - PSCRN
-  - {t: ▽, type: trans}
+  - ''
   - {type: held}
-  - ⌦
+  - ''
+  - ''
+  - {t: adj, h: ' '}
+  rnav:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - MUTE
+  - VOL UP
+  - VOL DN
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ⤒
+  - ↑
+  - ⤓
+  - ⇞
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ←
+  - ↓
+  - →
+  - ⇟
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ↑
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ←
+  - ↓
+  - →
+  adj:
+  - ''
+  - '&btx0'
+  - '&btx1'
+  - '&btx2'
+  - '&btx3'
+  - '&btx4'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT CLR
+  - ''
+  - '&btd0'
+  - '&btd1'
+  - '&btd2'
+  - '&btd3'
+  - '&btd4'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Reset
+  - ''
+  - '&bts0'
+  - '&bts1'
+  - '&bts2'
+  - '&bts3'
+  - '&bts4'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Out USB
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Out BLE
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - {t: Boot, type: held}

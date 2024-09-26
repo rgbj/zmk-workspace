@@ -73,7 +73,7 @@ ___     ___    ___            ___                  ___                 &kp LEFT 
 			>;
 		};
 
-		adj {
+		adjust {
 			bindings = <
 ___    &btx0  &btx1  &btx2  &btx3  &btx4  ___ ___ ___ ___ ___ ___ ___     &bt BT_CLR
 ___     &btd0  &btd1  &btd2  &btd3  &btd4  ___ ___ ___ ___ ___ ___ ___    &sys_reset
@@ -83,7 +83,7 @@ ___     ___      ___                  ___             ___    ___   ___    &bootl
 			>;
 		};
 
-		med {
+		media {
 			bindings = <
 &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP    &tog MED
 &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans        &trans         &trans

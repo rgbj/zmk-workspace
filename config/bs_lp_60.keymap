@@ -10,7 +10,8 @@
 #define NAV 1
 #define RNAV 2
 #define ADJ 3
-#define MED 4
+#define ACC 4
+#define MED 5
 
 #define ___ &none
 
@@ -21,6 +22,15 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_acc {
+            timeout-ms = <50>;
+            key-positions = <31 32>;
+            layers = <QWE>;
+            bindings = <&sl ACC>;
+        };
+    };
     macros {
         MACRO(bts0, <&bt BT_SEL 0>)
         MACRO(bts1, <&bt BT_SEL 1>)
@@ -82,6 +92,17 @@ ___       ___    ___    ___    ___    ___    ___ ___ ___ ___ ___          &out O
 ___     ___      ___                  ___             ___    ___   ___    &bootloader
 			>;
 		};
+
+        accents {
+            display-name = "acc";
+            bindings = <
+___    ___          ___  ___             ___  ___  ___        ___        ___            ___  ___  ___  ___     ___
+___     &kp LA(Q)    ___  &kp LS(LA(N2))  ___  ___  ___        &kp LA(U)  &kp     LA(I)  ___  ___  ___  ___    ___
+___      &kp LA(SQT)  ___  ___             ___  ___  ___        &kp LA(E)  &kp LA(GRAVE)  ___  ___  ___        ___
+___       ___          ___  &kp     LA(C)   ___  ___  &kp LA(N)  ___        ___            ___  ___            ___
+___     ___            ___                       ___                         ___                ___     ___    ___
+            >;
+        };
 
 		media {
 			bindings = <

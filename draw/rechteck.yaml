@@ -41,7 +41,7 @@ layers:
   - ;
   - ''''
   - ⏎
-  - ⇧
+  - {t: ⇧, h: ' '}
   - Z
   - X
   - C
@@ -52,15 +52,15 @@ layers:
   - ','
   - .
   - /
-  - RSHIFT
-  - ⌃
-  - ⌥
-  - ⌘
+  - {t: RSHIFT, h: ' '}
+  - {t: ⌃, h: ' '}
+  - {t: ⌥, h: ' '}
+  - {t: ⌘, h: ' '}
   - ␣
   - nav
-  - RGUI
-  - RALT
-  - RCTRL
+  - {t: RGUI, h: ' '}
+  - {t: RALT, h: ' '}
+  - {t: RCTRL, h: ' '}
   nav:
   - ''
   - F1
@@ -121,8 +121,8 @@ layers:
   - ''
   - {type: held}
   - ''
-  - {t: med, h: toggle}
-  - {t: adj, h: ' '}
+  - {t: media, h: toggle}
+  - {t: adjust, h: ' '}
   rnav:
   - ''
   - ''
@@ -185,7 +185,7 @@ layers:
   - ←
   - ↓
   - →
-  adj:
+  adjust:
   - ''
   - '&btx0'
   - '&btx1'
@@ -247,7 +247,69 @@ layers:
   - ''
   - ''
   - {t: Boot, type: held}
-  med:
+  acc:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Alt+ Q
+  - ''
+  - Sft+Alt+ 2
+  - ''
+  - ''
+  - ''
+  - Alt+ U
+  - Alt+ I
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Alt+ '
+  - ''
+  - {type: held}
+  - {type: held}
+  - ''
+  - ''
+  - Alt+ E
+  - Alt+ `
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Alt+ C
+  - ''
+  - ''
+  - Alt+ N
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  media:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -261,7 +323,7 @@ layers:
   - MUTE
   - VOL DN
   - VOL UP
-  - {t: med, h: toggle}
+  - {t: media, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -309,3 +371,7 @@ layers:
   - ←
   - ↓
   - →
+combos:
+- p: [31, 32]
+  k: {t: acc, h: ' '}
+  l: [qwerty]

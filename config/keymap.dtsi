@@ -196,6 +196,21 @@
             #sensor-binding-cells = <0>;
             bindings = <&egtab &kp LS(TAB)>;
         };
+        ewbf: ewbf {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LA(F) &kp LA(B)>;
+        };
+        ehnp: ehnp {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp DOWN &kp UP>;
+        };
+        elr: elr {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp RIGHT &kp LEFT>;
+        };
     };
     macros {
         MACRO(kill_word, <&macro_tap &kp ESC   &kp D>)
@@ -238,7 +253,7 @@
 &kp GRAVE        &kp Z &kp X &kp  C &kp   V &kp     B        &kp   N &kp        M &cs        &dc   &kp FSLH        &kp LC(LG(SPACE))
                              &shift &mo SYM &kp SPACE        &tdnav  &num NUM NUM &caps_word
             >; sensor-bindings = <
-                                               &etabs           &ewins
+                                               &etabs        &ewins
             >;
         };
         num {
@@ -248,6 +263,8 @@
 &trans        &kp MINUS &kp N4 &kp N5 &kp N6 &kp PLUS         &kp    BKSP  &sk LGUI &sk LALT &sk LCTRL &sk LSHFT        &trans  
 &trans        &kp    N0 &kp N1 &kp N2 &kp N3 &kp   N0         &kp     DEL  &trans   &trans   &trans    &trans           &trans  
                                &trans &trans &trans           &trans       &tog NUM &trans
+            >; sensor-bindings = <
+                                             &ewbf            &ewins
             >;
         };
         sym {
@@ -257,6 +274,8 @@
 &trans          &sk       LSHFT   &sk LCTRL &sk LALT &sk   LGUI  ___                  &kp    BKSP  &kp MINUS &kp UNDER &kp PRCNT &kp CARET        &wtt
 &trans          ___               ___       ___      ___         ___                  &kp     DEL  &kp  AMPS &kp  STAR &lpair    &rpair           &trans
                                             &trans    &trans     &trans               &kp     RET  &trans    MOTOG(NAV)
+            >; sensor-bindings = <
+                                                                 &etabs               &ehnp
             >;
         };
         nav {
@@ -266,6 +285,8 @@
 &trans        ___        &kp   LEFT &kp DOWN  &kp RIGHT &kp PG_DN        &kp LC(LA(LEFT)) &kp   LC(LA(RIGHT))  &kp    LC(LA(RET))    &kp LC(R) &kp  LC(Q)        &trans
 &trans        &tmux_prev &tmux_next &kp LA(B) &kp LA(F) ___              &kp LC(LA(DOWN)) &sk          LGUI    &sk          LALT     &sk LCTRL &sk  LSHFT        &trans
                                     &trans     &trans   &shift           &trans           &trans               &tog    NAV
+            >; sensor-bindings = <
+                                                        &elr             &ewins
             >;
         };
         mou {

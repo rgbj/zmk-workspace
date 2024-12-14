@@ -211,6 +211,11 @@
             #sensor-binding-cells = <0>;
             bindings = <&kp RIGHT &kp LEFT>;
         };
+        vud: vud {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_VOL_UP &kp C_VOL_DN>;
+        };
     };
     macros {
         MACRO(kill_word, <&macro_tap &kp ESC   &kp D>)
@@ -305,6 +310,8 @@ ___        ___         &out OUT_USB &out     OUT_TOG &out      OUT_BLE ___      
 ___        &bts0       &bts1        &bts2            &bts3             &bts4                    &bts4             &bts3             &bts2            &bts1        &btx0              ___
 ___        &bootloader &sys_reset   &ext_power EP_ON &ext_power EP_TOG &ext_power EP_OFF        &ext_power EP_OFF &ext_power EP_TOG &ext_power EP_ON &sys_reset   &bootloader        &tog MED
                                     ___              &sl          ADJD &sl          ADJX        &sl          ADJX &sl          ADJD ___
+            >; sensor-bindings = <
+                                                                       &vud                     &vud
             >;
         };
         adjust_x {

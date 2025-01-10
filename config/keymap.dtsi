@@ -28,15 +28,35 @@
 #define NUM 1
 #define SYM 2
 #define NAV 3
-#define MOU 4
 
-#define ADJ 5
-#define ADJX 6
-#define ADJD 7
+#define ohQWE 4
+#define ohPOI 5
+#define ohSYM 6
+#define ohNUM 7
+#define ohNAV 8
+#define ohWIN 9
 
-#define FUN 8
-#define ACC 9
-#define MED 10
+#define MOU 10
+
+#define ADJ 11
+#define ADJX 12
+#define ADJD 13
+
+#define FUN 14
+#define ACC 15
+#define MED 16
+
+#define _sym &mo SYM
+#define _num &num NUM NUM
+#define _nav &tdnav
+
+#define _1poi &ht_mo_sl ohPOI ohPOI
+#define _1sym &ht_mo_sl ohSYM ohSYM
+#define _1num &ht_mo_sl ohNUM ohNUM
+#define _1nav &ht_mo_sl ohNAV ohNAV
+#define _1win &mo ohWIN
+
+#define _spc &kp SPACE
 
 #define ___ &none
 
@@ -61,11 +81,41 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_acc {
+        combo_acc_l {
             timeout-ms = <50>;
             key-positions = <15 16>;
-            layers = <QWE>;
+            layers = <QWE ohQWE ohPOI>;
             bindings = <&sl ACC>;
+        };
+        combo_acc_r {
+            timeout-ms = <50>;
+            key-positions = <19 20>;
+            layers = <QWE ohQWE ohPOI>;
+            bindings = <&sl ACC>;
+        };
+        combo_oh_l {
+            timeout-ms = <50>;
+            key-positions = <26 27 28>;
+            layers = <QWE>;
+            bindings = <&to ohQWE>;
+        };
+        combo_oh_r {
+            timeout-ms = <50>;
+            key-positions = <31 32 33>;
+            layers = <QWE>;
+            bindings = <&to ohQWE>;
+        };
+        combo_th_l {
+            timeout-ms = <50>;
+            key-positions = <26 27 28>;
+            layers = <ohQWE ohPOI>;
+            bindings = <&to QWE>;
+        };
+        combo_th_r {
+            timeout-ms = <50>;
+            key-positions = <31 32 33>;
+            layers = <ohQWE ohPOI>;
+            bindings = <&to QWE>;
         };
         combo_adj {
             timeout-ms = <50>;
@@ -111,6 +161,13 @@
 */
     };
     behaviors {
+       ht_mo_sl: ht_mo_sl {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&sl>;
+        };
         tdnav: tdnav {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -124,7 +181,7 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&tog>;
         };
-        shift: shift {
+        shft: shft {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&sk RSHFT>, <&caps_word>;
@@ -153,7 +210,7 @@
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
             bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-            ignored-key-positions = <3 32>;
+            ignored-key-positions = <3 8>;
         };
         lrsw: lrsw {
             compatible = "zmk,behavior-mod-morph";
@@ -253,12 +310,12 @@
         qwerty {
             display-name = "qwerty";
             bindings = <
-&kp ESC          &kp Q &kp W &kp  E &kp   R &kp     T        &kp   Y &kp        U &kp      I &kp O &kp    P        &sl         ADJ
-&kp TAB          &kp A &kp S &kp  D &kp   F &kp     G        &kp   H &kp        J &kp      K &kp L &kp  SQT        &sl         FUN
-&kp GRAVE        &kp Z &kp X &kp  C &kp   V &kp     B        &kp   N &kp        M &cs        &dc   &kp FSLH        &kp LC(LG(SPACE))
-                             &shift &mo SYM &kp SPACE        &tdnav  &num NUM NUM &caps_word
+&kp ESC          &kp Q &kp W &kp E &kp R &kp T        &kp Y &kp U &kp I &kp O &kp P           &sl ADJ
+&kp TAB          &kp A &kp S &kp D &kp F &kp G        &kp H &kp J &kp K &kp L &kp SQT         &sl FUN
+&kp GRAVE        &kp Z &kp X &kp C &kp V &kp B        &kp N &kp M &cs   &dc   &kp FSLH        &kp LC(LG(SPACE))
+                             &shft _sym  _spc         _nav  _num  &caps_word
             >; sensor-bindings = <
-                                               &etabs        &ewins
+                                         &etabs       &ewins
             >;
         };
         num {
@@ -266,7 +323,7 @@
             bindings = <
 &trans        &kp UNDER &kp N7 &kp N8 &kp N9 &s_eq            &kp LA(BKSP) ___      &kp PIPE &kp  BSLH ___              &trans  
 &trans        &kp MINUS &kp N4 &kp N5 &kp N6 &kp PLUS         &kp    BKSP  &sk LGUI &sk LALT &sk LCTRL &sk LSHFT        &trans  
-&trans        &kp    N0 &kp N1 &kp N2 &kp N3 &kp   N0         &kp     DEL  &trans   &trans   &trans    &trans           &trans  
+&trans        &kp N0    &kp N1 &kp N2 &kp N3 &kp N0           &kp     DEL  &trans   &trans   &trans    &trans           &trans  
                                &trans &trans &trans           &trans       &tog NUM &trans
             >; sensor-bindings = <
                                              &ewbf            &ewins
@@ -289,9 +346,63 @@
 &trans        ___        &kp   HOME &kp   UP  &kp   END &kp PG_UP        &kp LC(LA(UP))   &kp LC(LA(LG(LEFT))) &kp LC(LA(LG(RIGHT))) &kp LC(W) &kill_word        &trans
 &trans        ___        &kp   LEFT &kp DOWN  &kp RIGHT &kp PG_DN        &kp LC(LA(LEFT)) &kp   LC(LA(RIGHT))  &kp    LC(LA(RET))    &kp LC(R) &kp  LC(Q)        &trans
 &trans        &tmux_prev &tmux_next &kp LA(B) &kp LA(F) ___              &kp LC(LA(DOWN)) &sk          LGUI    &sk          LALT     &sk LCTRL &sk  LSHFT        &trans
-                                    &trans     &trans   &shift           &trans           &trans               &tog    NAV
+                                    &trans     &trans   &shft            &trans           &trans               &tog    NAV
             >; sensor-bindings = <
                                                         &elr             &ewins
+            >;
+        };
+        oh_qwert {
+            display-name = "qwert";
+            bindings = <
+&kp ESC          &kp Q &kp W &kp E &kp R &kp T       &kp Y &kp U &kp I &kp O &kp P           &kp ESC
+&kp SPACE        &kp A &kp S &kp D &kp F &kp G       &kp H &kp J &kp K &kp L &kp SQT         &kp SPACE
+&shft            &kp Z &kp X &kp C &kp V &kp B       &kp N &kp M &cs   &dc   &kp FSLH        &shft
+                             _1nav _1sym _1poi       _1poi _1sym _1nav
+            >;
+        };
+        oh_poiuy {
+            display-name = "poiuy";
+            bindings = <
+&trans        &kp P    &kp O &kp  I &kp U &kp Y            &kp T &kp R &kp  E &kp W &kp Q        &trans
+&trans        &kp SQT  &kp L &kp  K &kp J &kp H            &kp G &kp F &kp  D &kp S &kp A        &trans
+&trans        &kp FSLH &dc   &cs    &kp M &kp N            &kp B &kp V &kp  C &kp X &kp Z        &trans
+                             ___    ___   _1win            _1win ___   ___
+            >;
+        };
+        oh_sym {
+            display-name = "1sym";
+            bindings = <
+&key_repeat        &kp DLLR  &kp HASH  &kp AT    &kp EXCL  &kp LA(BKSP)        &kp LA(BKSP) &kp EXCL  &kp AT    &kp HASH  &kp DLLR           &key_repeat
+&kp TAB            &kp CARET &kp PRCNT &kp UNDER &kp MINUS &kp BKSP            &kp BKSP     &kp MINUS &kp UNDER &kp PRCNT &kp CARET          &kp TAB
+&kp RET            &rpair    &lpair    &kp STAR  &kp AMPS  &kp DEL             &kp DEL      &kp AMPS  &kp STAR  &lpair    &rpair             &kp RET
+                                       ___       _1num     ___                 ___          _1num     ___
+            >;
+        };
+        oh_num {
+            display-name = "1num";
+            bindings = <
+___        &kp UNDER &kp N7 &kp N8 &kp N9 &s_eq             &s_eq    &kp N7 &kp N8 &kp N9 &kp UNDER         ___
+___        &kp MINUS &kp N4 &kp N5 &kp N6 &kp PLUS          &kp PLUS &kp N4 &kp N5 &kp N6 &kp MINUS         ___
+___        ___       &kp N1 &kp N2 &kp N3 &kp N0            &kp N0   &kp N1 &kp N2 &kp N3 ___               ___
+                            ___    ___    ___               ___      ___    ___
+            >;
+        };
+        oh_nav {
+            display-name = "1nav";
+            bindings = <
+___        ___       &kp HOME  &kp UP   &kp END   &kp PG_UP        &kp PG_UP &kp HOME  &kp UP   &kp END   ___              ___
+___        ___       &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN        &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT ___              ___
+___        &sk LSHFT &sk LCTRL &sk LALT &sk LGUI  ___              ___       &sk LGUI  &sk LALT &sk LCTRL &sk LSHFT        ___
+                               ___      ___       ___              ___       ___       ___
+            >;
+        };
+        oh_win {
+            display-name = "1win";
+            bindings = <
+___        &kp LS(LG(GRAVE)) &gtab     &lrsw                &kp LC(TAB)           &kp LG(GRAVE)            &kp LS(LG(GRAVE)) &kp LS(LC(TAB))      &rrsw                 &gtab     &kp LG(GRAVE)         ___
+___        &kp LC(Q)         &kp LC(R) &kp LC(LA(RET))      &kp LC(LA(LEFT))      &kp LC(LA(RIGHT))        &kp LC(LA(LEFT))  &kp LC(LA(RIGHT))    &kp LC(LA(RET))       &kp LC(R) &kp LC(Q)             ___
+___        ___               ___       &kp LC(LA(LG(LEFT))) &kp LC(LA(LG(RIGHT))) ___                      ___               &kp LC(LA(LG(LEFT))) &kp LC(LA(LG(RIGHT))) ___       ___                   ___
+                                       ___                  ___                   ___                      ___              ___                  ___
             >;
         };
         mou {
@@ -344,10 +455,10 @@ ___        &kp F1 &kp F2  &kp F3  &kp F4  ___        ___ ___      ___      ___  
         accents {
             display-name = "acc";
             bindings = <
-___          &kp LA(Q)   ___   &kp LS(LA(N2)) ___    ___          ___       &kp LA(U) &kp     LA(I) ___   ___          ___
-___          &kp LA(SQT) ___   ___            ___    ___          ___       &kp LA(E) &kp LA(GRAVE) ___   ___          ___
-___          ___         ___   &kp     LA(C)  ___    ___          &kp LA(N) ___       ___           ___   ___          ___
-                               &trans         &trans &trans       &trans    &trans    &trans
+___          &kp LA(Q)   &kp LS(LA(N2)) &kp LA(I)     &kp LA(U) ___              ___       &kp LA(U) &kp LA(I)     &kp LS(LA(N2)) &kp LA(Q)          ___
+___          &kp LA(SQT) ___            &kp LA(GRAVE) &kp LA(E) ___              ___       &kp LA(E) &kp LA(GRAVE) ___            &kp LA(SQT)        ___
+___          ___         ___            &kp LA(C)     ___       &kp LA(N)        &kp LA(N) ___       &kp LA(C)     ___            ___                ___
+                                        &trans        &trans    &trans           &trans    &trans    &trans
             >;
         };
         media {

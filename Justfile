@@ -85,7 +85,10 @@ draw:
     #!/usr/bin/env bash
     set -euo pipefail
     keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/rollow.keymap" -o "{{ draw }}/ciz-rollow.yaml"
-    keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/ciz-rollow.yaml" -o "{{ draw }}/ciz-rollow.svg"
+    keymap -c "{{ draw }}/config.yaml" draw -o "{{ draw }}/ciz-rollow.svg" "{{ draw }}/ciz-rollow.yaml"
+    keymap -c "{{ draw }}/config.yaml" draw -s qwerty num sym nav -o "{{ draw }}/ciz-rollow_base.svg" "{{ draw }}/ciz-rollow.yaml"
+    keymap -c "{{ draw }}/config.yaml" draw -s qwert poiuy 1sym 1num 1nav 1win -o "{{ draw }}/ciz-rollow_one-hand.svg" "{{ draw }}/ciz-rollow.yaml"
+    keymap -c "{{ draw }}/config.yaml" draw -s mouse adj adjx adjd fun acc media -o "{{ draw }}/ciz-rollow_extra.svg" "{{ draw }}/ciz-rollow.yaml"
     keymap -c "{{ draw }}/config.yaml" parse -z "{{ config }}/bs_lp_60.keymap" -o "{{ draw }}/rechteck.yaml"
     keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/rechteck.yaml" --qmk-keyboard gh60/satan --qmk-layout LAYOUT_60_ansi -o "{{ draw }}/rechteck.svg"
 

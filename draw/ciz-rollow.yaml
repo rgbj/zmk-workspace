@@ -172,6 +172,264 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: nav, h: toggle, type: held}
+  qwert:
+  - Esc
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - Esc
+  - ␣
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ''''
+  - ␣
+  - {t: RSHFT, h: ' ', s: cw}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
+  - /
+  - {t: RSHFT, h: ' ', s: cw}
+  - {t: 1nav, h: 1nav}
+  - {t: 1sym, h: 1sym}
+  - {t: poiuy, h: poiuy}
+  - {t: poiuy, h: poiuy}
+  - {t: 1sym, h: 1sym}
+  - {t: 1nav, h: 1nav}
+  poiuy:
+  - {t: ▽, type: trans}
+  - P
+  - O
+  - I
+  - U
+  - Y
+  - T
+  - R
+  - E
+  - W
+  - Q
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''''
+  - L
+  - K
+  - J
+  - H
+  - G
+  - F
+  - D
+  - S
+  - A
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - /
+  - {t: ., s: ':'}
+  - {t: ',', s: ;}
+  - M
+  - N
+  - B
+  - V
+  - C
+  - X
+  - Z
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {t: 1win, type: held}
+  - 1win
+  - ''
+  - ''
+  1sym:
+  - '&key_repeat'
+  - $
+  - '#'
+  - '@'
+  - '!'
+  - ⌥⌫
+  - ⌥⌫
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '&key_repeat'
+  - ⇥
+  - ^
+  - '%'
+  - _
+  - '-'
+  - ⌫
+  - ⌫
+  - '-'
+  - _
+  - '%'
+  - ^
+  - ⇥
+  - ⏎
+  - )}]>
+  - <[{(
+  - '*'
+  - '&'
+  - ⌦
+  - ⌦
+  - '&'
+  - '*'
+  - <[{(
+  - )}]>
+  - ⏎
+  - ''
+  - {t: 1num, h: 1num, type: held}
+  - ''
+  - ''
+  - {t: 1num, h: 1num}
+  - ''
+  1num:
+  - ''
+  - _
+  - '7'
+  - '8'
+  - '9'
+  - {t: '=', s: '&col_eq'}
+  - {t: '=', s: '&col_eq'}
+  - '7'
+  - '8'
+  - '9'
+  - _
+  - ''
+  - ''
+  - '-'
+  - '4'
+  - '5'
+  - '6'
+  - +
+  - +
+  - '4'
+  - '5'
+  - '6'
+  - '-'
+  - ''
+  - ''
+  - ''
+  - '1'
+  - '2'
+  - '3'
+  - '0'
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  1nav:
+  - ''
+  - ''
+  - ⤒
+  - ↑
+  - ⤓
+  - ⇞
+  - ⇞
+  - ⤒
+  - ↑
+  - ⤓
+  - ''
+  - ''
+  - ''
+  - ''
+  - ←
+  - ↓
+  - →
+  - ⇟
+  - ⇟
+  - ←
+  - ↓
+  - →
+  - ''
+  - ''
+  - ''
+  - {t: ⇧, h: ' '}
+  - {t: ⌃, h: ' '}
+  - {t: ⌥, h: ' '}
+  - {t: ⌘, h: ' '}
+  - ''
+  - ''
+  - {t: ⌘, h: ' '}
+  - {t: ⌥, h: ' '}
+  - {t: ⌃, h: ' '}
+  - {t: ⇧, h: ' '}
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  1win:
+  - ''
+  - ⇧⌘`
+  - ⌘⇥
+  - ⌃⇧⇥
+  - ⌃⇥
+  - ⌘`
+  - ⇧⌘`
+  - Sft+Ctl+ ⇥
+  - {t: ⌃⇥, s: Sft+ ⇥}
+  - ⌘⇥
+  - ⌘`
+  - ''
+  - ''
+  - ⌃Q
+  - ⌃R
+  - ⌃⌥⏎
+  - ⌃⌥←
+  - ⌃⌥→
+  - ⌃⌥←
+  - ⌃⌥→
+  - ⌃⌥⏎
+  - ⌃R
+  - ⌃Q
+  - ''
+  - ''
+  - ''
+  - ''
+  - ⌃⌥⌘←
+  - ⌃⌥⌘→
+  - ''
+  - ''
+  - ⌃⌥⌘←
+  - ⌃⌥⌘→
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
   mouse:
   - {t: ▽, type: trans}
   - ''
@@ -264,7 +522,7 @@ layers:
   - ''
   - ''
   - ''
-  - '&studio_unlock'
+  - ''
   - ''
   - ''
   - ''
@@ -390,37 +648,37 @@ layers:
   acc:
   - ''
   - Alt+ Q
-  - ''
   - Sft+Alt+ 2
-  - ''
+  - Alt+ I
+  - Alt+ U
   - ''
   - ''
   - Alt+ U
   - Alt+ I
-  - ''
-  - ''
+  - Sft+Alt+ 2
+  - Alt+ Q
   - ''
   - ''
   - Alt+ '
   - ''
-  - {type: held}
-  - {type: held}
+  - {t: Alt+ `, type: held}
+  - {t: Alt+ E, type: held}
   - ''
   - ''
   - Alt+ E
   - Alt+ `
   - ''
-  - ''
+  - Alt+ '
   - ''
   - ''
   - ''
   - ''
   - Alt+ C
   - ''
-  - ''
+  - Alt+ N
   - Alt+ N
   - ''
-  - ''
+  - Alt+ C
   - ''
   - ''
   - ''
@@ -476,7 +734,22 @@ layers:
 combos:
 - p: [15, 16]
   k: {t: acc, h: ' '}
+  l: [qwerty, qwert, poiuy]
+- p: [19, 20]
+  k: {t: acc, h: ' '}
+  l: [qwerty, qwert, poiuy]
+- p: [26, 27, 28]
+  k: {t: qwert, h: toggle}
   l: [qwerty]
+- p: [31, 32, 33]
+  k: {t: qwert, h: toggle}
+  l: [qwerty]
+- p: [26, 27, 28]
+  k: {t: qwerty, h: toggle}
+  l: [qwert, poiuy]
+- p: [31, 32, 33]
+  k: {t: qwerty, h: toggle}
+  l: [qwert, poiuy]
 - p: [0, 5]
   k: {t: adj, h: ' '}
   l: [sym]

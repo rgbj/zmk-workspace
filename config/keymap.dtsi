@@ -455,9 +455,9 @@ ___        &kp F1 &kp F2  &kp F3  &kp F4  ___        ___ ___      ___      ___  
         accents {
             display-name = "acc";
             bindings = <
-___          &kp LA(Q)   &kp LS(LA(N2)) &kp LA(I)     &kp LA(U) ___              ___       &kp LA(U) &kp LA(I)     &kp LS(LA(N2)) &kp LA(Q)          ___
-___          &kp LA(SQT) ___            &kp LA(GRAVE) &kp LA(E) ___              ___       &kp LA(E) &kp LA(GRAVE) ___            &kp LA(SQT)        ___
-___          ___         ___            &kp LA(C)     ___       &kp LA(N)        &kp LA(N) ___       &kp LA(C)     ___            ___                ___
+___          &kp RA(Q)   &kp LS(RA(N2)) &kp RA(I)     &kp RA(U) ___              ___       &kp RA(U) &kp RA(I)     &kp LS(RA(N2)) &kp RA(Q)          ___
+___          &kp RA(SQT) ___            &kp RA(GRAVE) &kp RA(E) ___              ___       &kp RA(E) &kp RA(GRAVE) ___            &kp RA(SQT)        ___
+___          ___         ___            &kp RA(C)     ___       &kp RA(N)        &kp RA(N) ___       &kp RA(C)     ___            ___                ___
                                         &trans        &trans    &trans           &trans    &trans    &trans
             >;
         };

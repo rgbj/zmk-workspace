@@ -206,10 +206,22 @@
             bindings = <&kp DOT>, <&kp COLON>;
             mods = <MOD_RSFT>;
         };
+        kt_on: key_on {
+            compatible = "zmk,behavior-key-toggle";
+            #binding-cells = <1>;
+            display-name = "Key Toggle On";
+            toggle-mode = "on";
+        };
+        kt_off: key_off {
+            compatible = "zmk,behavior-key-toggle";
+            #binding-cells = <1>;
+            display-name = "Key Toggle Off";
+            toggle-mode = "off";
+        };
         gtab: gtab {
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
-            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+            bindings = <&kt_on LGUI>, <&kp TAB>, <&kt_off LGUI>;
             ignored-key-positions = <3 8>;
         };
         lrsw: lrsw {
@@ -246,7 +258,7 @@
         egtab: egtab {
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
-            bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+            bindings = <&kt_on LGUI>, <&kp TAB>, <&kt_off LGUI>;
         };
         ewins: ewins {
             compatible = "zmk,behavior-sensor-rotate";

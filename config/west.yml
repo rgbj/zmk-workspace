@@ -27,6 +27,8 @@ manifest:
       url-base: https://github.com/rgbj
     - name: boardsource
       url-base: https://github.com/boardsource
+    - name: local
+      url-base: /Users/rgbj/g/github.com/rgbj
 
   projects:
     # - name: zmk-helpers
@@ -53,8 +55,8 @@ manifest:
     # ZMK with Zephyr namespaced under /zmk. This requires that ZMK imports
     # Zephyr with a path other than `zephyr` (as in `going-modular`).
     - name: zmk
-      remote: urob
-      revision: going-modular
+      remote: rgbj
+      revision: zmkfirmware_main_2025-03-28+urob_going-modular_bits
       path: .
       import:
         file: app/west.yml

@@ -52,15 +52,15 @@ layers:
   - ','
   - .
   - /
-  - {t: RSHIFT, h: ' '}
+  - {t: LSHIFT, h: ' '}
   - {t: ⌃, h: ' '}
   - {t: ⌥, h: ' '}
   - {t: ⌘, h: ' '}
   - ␣
-  - nav
-  - {t: RGUI, h: ' '}
-  - {t: RALT, h: ' '}
-  - {t: RCTRL, h: ' '}
+  - {t: 🐯, h: nav}
+  - {t: ⌘, h: ' '}
+  - {t: ⌥, h: ' '}
+  - {t: ⌃, h: ' '}
   nav:
   - ''
   - F1
@@ -263,28 +263,28 @@ layers:
   - ''
   - ''
   - ''
-  - Alt+ Q
+  - AGr+ Q
   - ''
-  - Sft+Alt+ 2
-  - ''
-  - ''
-  - ''
-  - Alt+ U
-  - Alt+ I
+  - Sft+AGr+ 2
   - ''
   - ''
+  - ''
+  - AGr+ U
+  - AGr+ I
   - ''
   - ''
   - ''
   - ''
-  - Alt+ '
+  - ''
+  - ''
+  - AGr+ '
   - ''
   - {type: held}
   - {type: held}
   - ''
   - ''
-  - Alt+ E
-  - Alt+ `
+  - AGr+ E
+  - AGr+ `
   - ''
   - ''
   - ''
@@ -292,10 +292,10 @@ layers:
   - ''
   - ''
   - ''
-  - Alt+ C
+  - AGr+ C
   - ''
   - ''
-  - Alt+ N
+  - AGr+ N
   - ''
   - ''
   - ''

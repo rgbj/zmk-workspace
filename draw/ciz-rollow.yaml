@@ -647,38 +647,38 @@ layers:
   - ''
   acc:
   - ''
-  - Alt+ Q
-  - Sft+Alt+ 2
-  - Alt+ I
-  - Alt+ U
+  - AGr+ Q
+  - Sft+AGr+ 2
+  - AGr+ I
+  - AGr+ U
   - ''
   - ''
-  - Alt+ U
-  - Alt+ I
-  - Sft+Alt+ 2
-  - Alt+ Q
+  - AGr+ U
+  - AGr+ I
+  - Sft+AGr+ 2
+  - AGr+ Q
   - ''
   - ''
-  - Alt+ '
+  - AGr+ '
   - ''
-  - {t: Alt+ `, type: held}
-  - {t: Alt+ E, type: held}
-  - ''
-  - ''
-  - Alt+ E
-  - Alt+ `
-  - ''
-  - Alt+ '
+  - {t: AGr+ `, type: held}
+  - {t: AGr+ E, type: held}
   - ''
   - ''
+  - AGr+ E
+  - AGr+ `
+  - ''
+  - AGr+ '
   - ''
   - ''
-  - Alt+ C
   - ''
-  - Alt+ N
-  - Alt+ N
   - ''
-  - Alt+ C
+  - AGr+ C
+  - ''
+  - AGr+ N
+  - AGr+ N
+  - ''
+  - AGr+ C
   - ''
   - ''
   - ''
